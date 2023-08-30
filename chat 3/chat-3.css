@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Dirt&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    overflow: hidden;
+}
+
+body {
+	font-family: 'Rubik Dirt', cursive;
+  	font-weight: 400;
+    font-size: {font_size};
+    line-height: 1.5em;
+    color: {text_color};
+}
+
+#log>div {
+    animation: fadeInRight .3s ease forwards, fadeOut 0.5s ease {message_hide_delay} forwards;
+    -webkit-animation: fadeInRight .3s ease forwards, fadeOut 0.5s ease {message_hide_delay} forwards;
+}
+
+#log {
+    position: absolute;
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+    padding: 0 10px 10px;
+    bottom: 0;
+    left: 0;
+ }
+
+#log>div {
+	margin: 1em;
+}
+
+#log>div.deleted {
+    visibility: hidden;
+}
+
+#log .emote {
+    position: relative;
+    padding: 0.4em 0.2em;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+#log .emote img {
+    display: inline-block;
+    height: 1em;
+    opacity: 0;
+}
+
+#log .message,#log .meta {
+    display: table-cell;
+    padding-bottom: 0.1em;
+    vertical-align: top;
+}
+
+#log .meta {
+  	position: relative;
+    display: inline;
+    padding: 0.5em;
+    margin: 0;
+  	top: 0;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    border-radius: 15px;
+    margin-bottom: -0.5em;
+}
+
+#log .message {
+    display: table;
+    table-layout: fixed;
+    width: fit-content;
+    padding: 0.5em 1em 0 0.8em;
+    margin: 0;
+    top: 0;
+    color: #FFF;
+    word-wrap: break-word;
+    border-bottom: 2px solid #fff;
+    border-radius: 15px;
+}
+
+.grid{
+    padding: 0.5em;
+}
+
+.badge {
+    position: relative;
+    display: inline-block;
+    height: 1em;
+    top: -0.1em;
+    margin-right: 0.2em;
+    vertical-align: middle;
+}
+
+.name {
+    margin-left: 0.2em;
+}
