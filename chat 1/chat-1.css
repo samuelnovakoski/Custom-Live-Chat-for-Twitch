@@ -1,0 +1,100 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:700);
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    height: 100%;
+    overflow: hidden;
+}
+
+body {
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-size: {font_size};
+    line-height: 1.5em;
+    color: {text_color};
+}
+
+#log>div {
+    animation: fadeInRight .3s ease forwards, fadeOut 0.5s ease {message_hide_delay} forwards;
+    -webkit-animation: fadeInRight .3s ease forwards, fadeOut 0.5s ease {message_hide_delay} forwards;
+}
+
+#log {
+    display: table;
+    table-layout: fixed;
+    position: absolute;
+    width: 100%;
+    padding: 0 10px 10px;
+    bottom: 0;
+    left: 0;
+ }
+
+#log>div {
+	margin: 1em;
+}
+
+#log>div.deleted {
+    visibility: hidden;
+}
+
+#log .emote {
+    position: relative;
+    padding: 0.4em 0.2em;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+#log .emote img {
+    display: inline-block;
+    height: 1em;
+    opacity: 0;
+}
+
+#log .message,#log .meta {
+    vertical-align: top;
+    display: table-cell;
+    padding-bottom: 0.1em;
+}
+
+#log .meta {
+  	position: relative;
+  	top: 10px;
+    display: inline;
+  	background: #A8E0FC;
+  	border-radius: 0px 15px 15px 15px;
+    padding: 0.5em;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+#log .message {
+    display: table;
+    table-layout: fixed;
+    width: fit-content;
+    padding: 1em 1em 0.8em 0.8em;
+  	color: #99FF00;
+    border: 2px solid #99FF00;
+  	border-radius: 15px;
+    word-wrap: break-word;
+}
+
+.badge {
+    display: inline-block;
+    position: relative;
+    height: 1em;
+    vertical-align: middle;
+    margin-right: 0.2em;
+    top: -0.1em;
+}
+
+.name {
+    margin-left: 0.2em;
+    text-shadow: 1px 2px 2px rgba(0, 0, 0, 0.4)
+}
