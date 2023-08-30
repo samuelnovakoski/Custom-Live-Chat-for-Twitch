@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Trade+Winds&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    overflow: hidden;
+}
+
+body {
+	font-family: 'Trade Winds', cursive;
+    font-weight: 400;
+    font-size: {font_size};
+    line-height: 1.5em;
+    color: {text_color};
+}
+
+#log>div {
+    animation: fadeInRight .3s ease forwards, fadeOut 0.5s ease {message_hide_delay} forwards;
+    -webkit-animation: fadeInRight .3s ease forwards, fadeOut 0.5s ease {message_hide_delay} forwards;
+}
+
+#log {
+    position: absolute;
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+    padding: 0 5px 5px;
+    bottom: 0;
+    left: 0;
+ }
+
+#log>div {
+	margin: 1em;
+}
+
+#log>div.deleted {
+    visibility: hidden;
+}
+
+#log .emote {
+    position: relative;
+    padding: 0.4em 0.2em;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+#log .emote img {
+    display: inline-block;
+    height: 1em;
+    opacity: 0;
+}
+
+#log .message,#log .meta {
+    display: table-cell;
+    padding-bottom: 0.1em;
+}
+
+#log .meta {
+  	position: relative;
+    display: grid;
+  	grid-template-columns: 0.8fr 1fr;
+    align-items: center;
+    top: 18px;
+    color: #fff;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+#log .message {
+    position: relative;
+    display: table;
+    table-layout: fixed;
+    width: fit-content;  
+    padding: 1em 1em 0.5em 0.8em;
+    top: 0.5em;
+  	color: #fff;
+  	border-radius: 15px;
+    word-wrap: break-word;
+}
+
+.message::before{
+    content: '';
+    display: inline-block;
+    position: absolute;
+    top: 12px;
+    left: 0;
+    width: 2px;
+    height: 85%;
+    background: #FFF;
+    margin: 0 auto;
+}
+
+.badge {
+    position: relative;
+    display: inline-block;
+    height: 2.5rem;
+    margin-right: 0.2em;
+    vertical-align: middle;
+}
+
+.name {
+    margin-left: 0.2em;
+    margin-right: 0.5em;
+    top: -0.1em;
+}
+.grid {
+    display: grid;
+    grid-template-columns: 1.8fr 2fr;
+}
